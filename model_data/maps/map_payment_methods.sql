@@ -1,7 +1,8 @@
 --@variable "dev_telco_analytics" ${SCHEMA_TELCO_ANALYTICS}
 
 
--- map_payment_methods
+DROP TABLE IF EXISTS "dev_telco_analytics".map_payment_methods;
+
 CREATE TABLE "dev_telco_analytics".map_payment_methods
 AS
 SELECT  DISTINCT paymentmethod                                :: VARCHAR(200)      AS paymentmethod,

@@ -5,6 +5,8 @@
 -- Table to store the different types of payment methods
 ---------------------------------
 
+DROP TABLE IF EXISTS "dev_telco_analytics".dim_payment_methods;
+
 CREATE TABLE "dev_telco_analytics".dim_payment_methods
 AS
 SELECT  'mailed_check'                      :: VARCHAR(200)   AS payment_method_sk,

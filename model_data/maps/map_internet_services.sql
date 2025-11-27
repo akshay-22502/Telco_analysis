@@ -1,7 +1,7 @@
 --@variable "dev_telco_analytics" ${SCHEMA_TELCO_ANALYTICS}
 
+DROP TABLE IF EXISTS "dev_telco_analytics".map_internet_services;
 
--- map_internet_services
 CREATE TABLE "dev_telco_analytics".map_internet_services
 AS
 SELECT  DISTINCT internetservice                                :: VARCHAR(200)     AS internetservice,

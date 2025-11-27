@@ -4,6 +4,7 @@
 -- create dim_contract_types
 -- Table to store the contract types of the customers
 ---------------------------------
+DROP TABLE IF EXISTS "dev_telco_analytics".dim_contract_types;
 
 CREATE TABLE "dev_telco_analytics".dim_contract_types
 AS

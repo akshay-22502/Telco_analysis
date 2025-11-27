@@ -5,6 +5,7 @@
 -- Table to store the genders of the customers
 ---------------------------------
 
+DROP TABLE IF EXISTS "dev_telco_analytics".dim_genders;
 
 CREATE TABLE "dev_telco_analytics".dim_genders
 AS

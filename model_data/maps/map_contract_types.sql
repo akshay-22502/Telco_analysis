@@ -5,6 +5,8 @@
 -- Table to store the different types of contract types
 ---------------------------------
 
+DROP TABLE IF EXISTS "dev_telco_analytics".map_contract_types;
+
 CREATE TABLE "dev_telco_analytics".map_contract_types
 AS
 SELECT  DISTINCT contract                                               :: VARCHAR(200)    AS contract,

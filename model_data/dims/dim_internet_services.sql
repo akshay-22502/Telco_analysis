@@ -5,6 +5,8 @@
 -- Table to store the different types of internet services
 ---------------------------------
 
+DROP TABLE IF EXISTS "dev_telco_analytics".dim_internet_services;
+
 CREATE TABLE "dev_telco_analytics".dim_internet_services
 AS
 SELECT  'dsl'                  :: VARCHAR(200)  AS internet_service_sk,

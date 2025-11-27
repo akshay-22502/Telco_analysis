@@ -5,6 +5,7 @@
 -- Create  "dev_telco_analytics".fact_telco_customer_churns
 -- Fact table to store the data for the telco customer churns with sks of the dimensions
 ---------------------------------
+DROP TABLE IF EXISTS "dev_telco_analytics".fact_telco_customer_churns;
 
 CREATE TABLE "dev_telco_analytics".fact_telco_customer_churns
 AS
