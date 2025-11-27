@@ -14,7 +14,7 @@ SELECT  DISTINCT contract                                               :: VARCH
             WHEN contract = 'Two year'       THEN 'two_year'
             ELSE 'unknown'
         END                                                             :: VARCHAR(200)    AS contract_type_nk
-  FROM  dev_telco_customer_rdl.telco_customer_churn_raw;
+  FROM  "dev_telco_customer_rdl".telco_customer_churn_raw;
 
 -- SELECT  *
 --     FROM  "dev_telco_analytics".map_contract_types;

@@ -53,20 +53,20 @@ SELECT  customerID                                                              
         NULLIF(TotalCharges, ' ')                                                        :: DECIMAL(10,2)   AS actual_total_charges,
         (tenure :: INTEGER) * (MonthlyCharges :: DECIMAL(10,2))                          :: DECIMAL(10,2)   AS expected_total_charges,
         CASE WHEN LOWER(churn) = 'yes' THEN 1 ELSE 0 END                                 :: INTEGER         AS is_churned
-  FROM  dev_telco_customer_rdl.telco_customer_churn_raw tc
-  LEFT  JOIN dev_telco_analytics.map_contract_types mct
+  FROM  "dev_telco_customer_rdl".telco_customer_churn_raw tc
+  LEFT  JOIN "dev_telco_analytics".map_contract_types mct
         ON tc.contract = mct.contract
-  LEFT  JOIN dev_telco_analytics.map_internet_services mis
+  LEFT  JOIN "dev_telco_analytics".map_internet_services mis
         ON tc.internetservice = mis.internetservice
-  LEFT  JOIN dev_telco_analytics.map_payment_methods mpm
+  LEFT  JOIN "dev_telco_analytics".map_payment_methods mpm
         ON tc.paymentmethod = mpm.paymentmethod
-  LEFT  JOIN dev_telco_analytics.dim_genders dg
+  LEFT  JOIN "dev_telco_analytics".dim_genders dg
         ON LOWER(tc.gender) = dg.gender_nk
-  LEFT  JOIN dev_telco_analytics.dim_internet_services dis
+  LEFT  JOIN "dev_telco_analytics".dim_internet_services dis
         ON mis.internet_service_nk = dis.internet_service_nk
-  LEFT  JOIN dev_telco_analytics.dim_contract_types
+  LEFT  JOIN "dev_telco_analytics".dim_contract_types
         ON mct.contract_type_nk = dim_contract_types.contract_type_nk
-  LEFT  JOIN dev_telco_analytics.dim_payment_methods
+  LEFT  JOIN "dev_telco_analytics".dim_payment_methods
         ON mpm.payment_method_nk = dim_payment_methods.payment_method_nk;
 
 

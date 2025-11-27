@@ -2,7 +2,7 @@
 
 
 -- map_payment_methods
-CREATE TABLE dev_telco_analytics.map_payment_methods
+CREATE TABLE "dev_telco_analytics".map_payment_methods
 AS
 SELECT  DISTINCT paymentmethod                                :: VARCHAR(200)      AS paymentmethod,
         CASE
@@ -12,8 +12,8 @@ SELECT  DISTINCT paymentmethod                                :: VARCHAR(200)   
             WHEN paymentmethod = 'Bank transfer (automatic)' THEN 'bank_transfer_automatic'
             ELSE 'unknown'
         END                                                   :: VARCHAR(200)      AS payment_method_nk
-  FROM  dev_telco_customer_rdl.telco_customer_churn_raw;
+  FROM  "dev_telco_customer_rdl".telco_customer_churn_raw;
 
 -- SELECT  *
---     FROM  dev_telco_analytics.map_payment_methods;
+--     FROM  "dev_telco_analytics".map_payment_methods;
 
