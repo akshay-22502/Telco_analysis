@@ -7,6 +7,7 @@
 ---------------------------------
 
 
+
 DROP TABLE IF EXISTS "dev_telco_analytics".fact_telco_customer_churns_ml_unload CASCADE;
 
 CREATE TABLE "dev_telco_analytics".fact_telco_customer_churns_ml_unload
@@ -49,11 +50,13 @@ SELECT  telco_customer_churn_sk,
         monthly_charges,
         actual_total_charges,
         expected_total_charges,
+        CASE WHEN actual_total_charges < expected_total_charges THEN 1 ELSE 0 END                 AS is_expected_charge_more_than_actual,
         is_churned
   FROM  "dev_telco_analytics".fact_telco_customer_churns
   LEFT  JOIN "dev_telco_analytics".dim_contract_types        USING (contract_type_sk)
   LEFT  JOIN "dev_telco_analytics".dim_internet_services     USING (internet_service_sk)
   LEFT  JOIN "dev_telco_analytics".dim_payment_methods       USING (payment_method_sk)
   LEFT  JOIN "dev_telco_analytics".dim_genders               USING (gender_sk)
+ WHERE  actual_total_charges IS NOT NULL
 ;
 
