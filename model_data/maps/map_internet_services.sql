@@ -1,5 +1,10 @@
 --@variable "dev_telco_analytics" ${SCHEMA_TELCO_ANALYTICS}
 
+---------------------------------
+-- create map_internet_services
+-- Table to store the different types of internet services to map with dimension table
+---------------------------------
+
 DROP TABLE IF EXISTS "dev_telco_analytics".map_internet_services;
 
 CREATE TABLE "dev_telco_analytics".map_internet_services

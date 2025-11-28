@@ -1,5 +1,9 @@
 --@variable "dev_telco_analytics" ${SCHEMA_TELCO_ANALYTICS}
 
+---------------------------------
+-- create map_payment_methods
+-- Table to store the different types of payment methods to map with dimension table
+---------------------------------
 
 DROP TABLE IF EXISTS "dev_telco_analytics".map_payment_methods;
 

@@ -2,7 +2,7 @@
 
 ---------------------------------
 -- create map_contract_types
--- Table to store the different types of contract types
+-- Table to store the different types of contract types to map with dimension table
 ---------------------------------
 
 DROP TABLE IF EXISTS "dev_telco_analytics".map_contract_types;
