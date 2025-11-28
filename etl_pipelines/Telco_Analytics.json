@@ -159,13 +159,6 @@
                                                 "tag": "3b00a8da-9adc-4d7e-98af-33bff1802453"
                                             },
                                             {
-                                                "id": 145459448,
-                                                "name": "Telco Analytics Post Processing",
-                                                "description": "",
-                                                "type": "ORCHESTRATION",
-                                                "tag": "6f1f1c1d-3514-40c2-be68-6e55f7757c9a"
-                                            },
-                                            {
                                                 "id": 145459442,
                                                 "name": "Telco Analytics Pre Processing",
                                                 "description": "",
@@ -189,9 +182,9 @@
     "orchestrationJobs": [
         {
             "id": 145459469,
-            "revision": 24,
-            "created": 1764348463974,
-            "timestamp": 1764348463974,
+            "revision": 27,
+            "created": 1764350571010,
+            "timestamp": 1764350571010,
             "components": {
                 "145459456": {
                     "id": 145459456,
@@ -244,12 +237,12 @@
                     "connectorHint": "UNCONDITIONAL",
                     "executionHint": "FLOW",
                     "implementationID": -1946388514,
-                    "x": -224,
+                    "x": -368,
                     "y": -16,
                     "width": 32,
                     "height": 32,
                     "inputConnectorIDs": [
-                        145579606
+                        145579889
                     ],
                     "outputSuccessConnectorIDs": [],
                     "outputFailureConnectorIDs": [],
@@ -539,7 +532,7 @@
                         145579590
                     ],
                     "outputSuccessConnectorIDs": [
-                        145579610
+                        145579889
                     ],
                     "outputFailureConnectorIDs": [],
                     "outputUnconditionalConnectorIDs": [],
@@ -575,87 +568,6 @@
                                             "slot": 1,
                                             "type": "STRING",
                                             "value": "Create Telco Analytics Facts"
-                                        }
-                                    }
-                                }
-                            },
-                            "visible": true
-                        },
-                        "3": {
-                            "slot": 3,
-                            "name": "",
-                            "elements": {},
-                            "visible": false
-                        },
-                        "4": {
-                            "slot": 4,
-                            "name": "Set Scalar Variables",
-                            "elements": {},
-                            "visible": true
-                        },
-                        "5": {
-                            "slot": 5,
-                            "name": "Set Grid Variables",
-                            "elements": {},
-                            "visible": true
-                        }
-                    },
-                    "expectedFailure": null,
-                    "activationStatus": "ENABLED",
-                    "outputIterationConnectorIDs": [],
-                    "inputIterationConnectorIDs": []
-                },
-                "145579611": {
-                    "id": 145579611,
-                    "inputCardinality": "ONE",
-                    "outputCardinality": "MANY",
-                    "connectorHint": "SUCCESS_FAIL",
-                    "executionHint": "TRANSFORM",
-                    "implementationID": 1785813072,
-                    "x": -368,
-                    "y": -16,
-                    "width": 32,
-                    "height": 32,
-                    "inputConnectorIDs": [
-                        145579610
-                    ],
-                    "outputSuccessConnectorIDs": [
-                        145579606
-                    ],
-                    "outputFailureConnectorIDs": [],
-                    "outputUnconditionalConnectorIDs": [],
-                    "outputTrueConnectorIDs": [],
-                    "outputFalseConnectorIDs": [],
-                    "exportMappings": {},
-                    "parameters": {
-                        "1": {
-                            "slot": 1,
-                            "name": "Name",
-                            "elements": {
-                                "1": {
-                                    "slot": 1,
-                                    "values": {
-                                        "1": {
-                                            "slot": 1,
-                                            "type": "STRING",
-                                            "value": "Telco Analytics Post Processing"
-                                        }
-                                    }
-                                }
-                            },
-                            "visible": true
-                        },
-                        "2": {
-                            "slot": 2,
-                            "name": "Orchestration Job",
-                            "elements": {
-                                "1": {
-                                    "slot": 1,
-                                    "values": {
-                                        "1": {
-                                            "slot": 1,
-                                            "type": "STRING",
-                                            "value": "Telco Analytics Post Processing"
                                         }
                                     }
                                 }
@@ -703,14 +615,9 @@
                     "sourceID": 145579592,
                     "targetID": 145579591
                 },
-                "145579610": {
-                    "id": 145579610,
+                "145579889": {
+                    "id": 145579889,
                     "sourceID": 145579591,
-                    "targetID": 145579611
-                },
-                "145579606": {
-                    "id": 145579606,
-                    "sourceID": 145579611,
                     "targetID": 145459462
                 }
             },
@@ -728,7 +635,7 @@
             "noteConnectors": {},
             "canUndo": true,
             "undoCommand": "Move Components",
-            "undoCreated": 1764348461333,
+            "undoCreated": 1764350567751,
             "canRedo": false,
             "redoCommand": "",
             "redoCreated": -1,
@@ -743,244 +650,6 @@
                     "colour": "00ce4f"
                 }
             },
-            "variables": {},
-            "grids": {}
-        },
-        {
-            "id": 145459448,
-            "revision": 13,
-            "created": 1764348685325,
-            "timestamp": 1764348685325,
-            "components": {
-                "145459455": {
-                    "id": 145459455,
-                    "inputCardinality": "ZERO",
-                    "outputCardinality": "MANY",
-                    "connectorHint": "UNCONDITIONAL",
-                    "executionHint": "FLOW",
-                    "implementationID": 444132438,
-                    "x": -320,
-                    "y": 0,
-                    "width": 32,
-                    "height": 32,
-                    "inputConnectorIDs": [],
-                    "outputSuccessConnectorIDs": [],
-                    "outputFailureConnectorIDs": [],
-                    "outputUnconditionalConnectorIDs": [
-                        145579685
-                    ],
-                    "outputTrueConnectorIDs": [],
-                    "outputFalseConnectorIDs": [],
-                    "exportMappings": {},
-                    "parameters": {
-                        "1": {
-                            "slot": 1,
-                            "name": "Name",
-                            "elements": {
-                                "1": {
-                                    "slot": 1,
-                                    "values": {
-                                        "1": {
-                                            "slot": 1,
-                                            "type": "STRING",
-                                            "value": "Start"
-                                        }
-                                    }
-                                }
-                            },
-                            "visible": true
-                        }
-                    },
-                    "expectedFailure": null,
-                    "activationStatus": "ENABLED",
-                    "outputIterationConnectorIDs": [],
-                    "inputIterationConnectorIDs": []
-                },
-                "145459454": {
-                    "id": 145459454,
-                    "inputCardinality": "ONE",
-                    "outputCardinality": "ZERO",
-                    "connectorHint": "UNCONDITIONAL",
-                    "executionHint": "FLOW",
-                    "implementationID": -1946388514,
-                    "x": 96,
-                    "y": 0,
-                    "width": 32,
-                    "height": 32,
-                    "inputConnectorIDs": [
-                        145579709
-                    ],
-                    "outputSuccessConnectorIDs": [],
-                    "outputFailureConnectorIDs": [],
-                    "outputUnconditionalConnectorIDs": [],
-                    "outputTrueConnectorIDs": [],
-                    "outputFalseConnectorIDs": [],
-                    "exportMappings": {},
-                    "parameters": {
-                        "1": {
-                            "slot": 1,
-                            "name": "Name",
-                            "elements": {
-                                "1": {
-                                    "slot": 1,
-                                    "values": {
-                                        "1": {
-                                            "slot": 1,
-                                            "type": "STRING",
-                                            "value": "End Success"
-                                        }
-                                    }
-                                }
-                            },
-                            "visible": true
-                        }
-                    },
-                    "expectedFailure": null,
-                    "activationStatus": "ENABLED",
-                    "outputIterationConnectorIDs": [],
-                    "inputIterationConnectorIDs": []
-                },
-                "145579689": {
-                    "id": 145579689,
-                    "inputCardinality": "ONE",
-                    "outputCardinality": "MANY",
-                    "connectorHint": "SUCCESS_FAIL",
-                    "executionHint": "EXECUTE",
-                    "implementationID": -1773186829,
-                    "x": -112,
-                    "y": 0,
-                    "width": 32,
-                    "height": 32,
-                    "inputConnectorIDs": [
-                        145579685
-                    ],
-                    "outputSuccessConnectorIDs": [
-                        145579709
-                    ],
-                    "outputFailureConnectorIDs": [],
-                    "outputUnconditionalConnectorIDs": [],
-                    "outputTrueConnectorIDs": [],
-                    "outputFalseConnectorIDs": [],
-                    "exportMappings": {},
-                    "parameters": {
-                        "1": {
-                            "slot": 1,
-                            "name": "Name",
-                            "elements": {
-                                "1": {
-                                    "slot": 1,
-                                    "values": {
-                                        "1": {
-                                            "slot": 1,
-                                            "type": "STRING",
-                                            "value": "Load Data from Modeled Table to S3"
-                                        }
-                                    }
-                                }
-                            },
-                            "visible": true
-                        },
-                        "2": {
-                            "slot": 2,
-                            "name": "Script",
-                            "elements": {
-                                "1": {
-                                    "slot": 1,
-                                    "values": {
-                                        "1": {
-                                            "slot": 1,
-                                            "type": "STRING",
-                                            "value": "import boto3\nfrom botocore.exceptions import ClientError\nimport pandas as pd\nimport psycopg2\nimport psycopg2.extras as extras\nfrom io import StringIO\n\n# --- S3 Configuration Variables ---\nBUCKET_NAME = 'hemo-telco-analytics'\nOBJECT_KEY = 'raw_data/Telco-Customer-Churn.csv' \nAWS_REGION = 'ap-south-1' \n\n# --- Database Configuration ---\nDB_PARAMS = {\n    'user': 'akshay',\n    'password': 'RziW_ysPXDJSndeJ7DuX9w',\n    'host': 'telco-analytics-18770.j77.aws-eu-central-1.cockroachlabs.cloud',\n    'database': 'defaultdb',\n    'port': '26257',\n    'sslmode': 'require' \n}\n\n# --- Table Configuration ---\nRAW_TABLE_NAME = 'dev_telco_customer_rdl.telco_customer_churn_raw'\n\n# --- SQL Table Creation Command (All TEXT/VARCHAR for raw data) ---\nCREATE_RAW_TABLE_SQL = f\"\"\"\nCREATE TABLE IF NOT EXISTS {RAW_TABLE_NAME} (\n    customerID VARCHAR(10) PRIMARY KEY,\n    gender TEXT,\n    SeniorCitizen TEXT,\n    Partner TEXT,\n    Dependents TEXT,\n    tenure TEXT,\n    PhoneService TEXT,\n    MultipleLines TEXT,\n    InternetService TEXT,\n    OnlineSecurity TEXT,\n    OnlineBackup TEXT,\n    DeviceProtection TEXT,\n    TechSupport TEXT,\n    StreamingTV TEXT,\n    StreamingMovies TEXT,\n    Contract TEXT,\n    PaperlessBilling TEXT,\n    PaymentMethod TEXT,\n    MonthlyCharges TEXT,\n    TotalCharges TEXT,\n    Churn TEXT\n);\n\"\"\"\n\ndef read_s3_file_to_df(bucket, key, region):\n    \"\"\"Reads a CSV file directly from S3 into a Pandas DataFrame.\"\"\"\n    s3 = boto3.client('s3', region_name=region)\n    print(f\"Reading {key} from S3 bucket {bucket}...\")\n    \n    try:\n        response = s3.get_object(Bucket=bucket, Key=key)\n        file_content = response['Body'].read().decode('utf-8')\n        df = pd.read_csv(StringIO(file_content))\n        \n        print(f\"S3 read successful. Loaded {len(df)} rows.\")\n        return df\n        \n    except ClientError as e:\n        error_code = e.response['Error']['Code']\n        print(f\"AWS ClientError occurred ({error_code}): {e}\")\n        return None\n    except Exception as e:\n        print(f\"Unexpected error during S3 read: {e}\")\n        return None\n\ndef create_raw_table(conn):\n    \"\"\"Executes a SQL command to create the raw table.\"\"\"\n    print(f\"Creating/recreating raw table: {RAW_TABLE_NAME}\")\n    with conn.cursor() as cur:\n        # Drop table if it exists to ensure a clean refresh\n        cur.execute(f\"DROP TABLE IF EXISTS {RAW_TABLE_NAME} CASCADE;\")\n        conn.commit()\n        \n        # Create the new table\n        cur.execute(CREATE_RAW_TABLE_SQL)\n        conn.commit()\n        print(\"Raw table created successfully.\")\n\ndef execute_batch_insert(conn, df, table):\n    \"\"\"Inserts DataFrame content into the specified table using fast bulk insertion.\"\"\"\n    \n    tuples = [tuple(x) for x in df.to_numpy()]\n    cols = ','.join(list(df.columns))\n    \n    query  = \"INSERT INTO %s(%s) VALUES %%s\" % (table, cols)\n    cursor = conn.cursor()\n    \n    try:\n        print(f\"Starting bulk insert of {len(tuples)} rows into {table}...\")\n        # Bulk insert the data using execute_values\n        extras.execute_values(cursor, query, tuples, page_size=1000)\n        conn.commit()\n        print(\"Bulk insert complete.\")\n        return True\n    except (Exception, psycopg2.Error) as error:\n        print(f\"Error while inserting data into CockroachDB: {error}\")\n        conn.rollback()\n        return False\n    finally:\n        cursor.close()\n\ndef main():\n    \"\"\"Main EL function: Read from S3, Load into raw DB table.\"\"\"\n    conn = None \n    \n    try:\n        # --- EXTRACT (Read from S3 into DF) ---\n        print(\"\\n--- PHASE 1: EXTRACT (S3 to DataFrame) ---\")\n        df_raw = read_s3_file_to_df(BUCKET_NAME, OBJECT_KEY, AWS_REGION)\n        \n        if df_raw is None or df_raw.empty:\n            print(\"Pipeline aborted.\")\n            return\n\n        # --- LOAD (Into Raw Staging Table) ---\n        \n        # 1. Establish connection to CockroachDB\n        print(\"\\n--- PHASE 2: LOAD (DB Ingestion) ---\")\n        print(\"Establishing connection to CockroachDB...\")\n        conn = psycopg2.connect(**DB_PARAMS)\n        conn.autocommit = False \n        print(\"Connection successful.\")\n\n        # 2. Create and load RAW Staging Table\n        create_raw_table(conn)\n        \n        if execute_batch_insert(conn, df_raw, RAW_TABLE_NAME):\n            print(\"\\nPipeline successful. Raw data is available in the staging table.\")\n\n    except psycopg2.OperationalError as e:\n        print(f\"Database Connection Error. Check credentials, host, port, and network status: {e}\")\n    except Exception as e:\n        print(f\"An unexpected error occurred: {e}\")\n    finally:\n        if conn:\n            conn.close()\n            print(\"\\nDatabase connection closed.\")\n\nif __name__ == \"__main__\":\n    main()\n    "
-                                        }
-                                    }
-                                }
-                            },
-                            "visible": true
-                        },
-                        "3": {
-                            "slot": 3,
-                            "name": "Interpreter",
-                            "elements": {
-                                "1": {
-                                    "slot": 1,
-                                    "values": {
-                                        "1": {
-                                            "slot": 1,
-                                            "type": "STRING",
-                                            "value": "Python 3"
-                                        }
-                                    }
-                                }
-                            },
-                            "visible": true
-                        },
-                        "4": {
-                            "slot": 4,
-                            "name": "Timeout",
-                            "elements": {
-                                "1": {
-                                    "slot": 1,
-                                    "values": {
-                                        "1": {
-                                            "slot": 1,
-                                            "type": "INTEGER",
-                                            "value": "360"
-                                        }
-                                    }
-                                }
-                            },
-                            "visible": true
-                        },
-                        "5": {
-                            "slot": 5,
-                            "name": "User",
-                            "elements": {
-                                "1": {
-                                    "slot": 1,
-                                    "values": {
-                                        "1": {
-                                            "slot": 1,
-                                            "type": "STRING",
-                                            "value": "Restricted"
-                                        }
-                                    }
-                                }
-                            },
-                            "visible": false
-                        }
-                    },
-                    "expectedFailure": null,
-                    "activationStatus": "ENABLED",
-                    "outputIterationConnectorIDs": [],
-                    "inputIterationConnectorIDs": []
-                }
-            },
-            "successConnectors": {
-                "145579709": {
-                    "id": 145579709,
-                    "sourceID": 145579689,
-                    "targetID": 145459454
-                }
-            },
-            "failureConnectors": {},
-            "unconditionalConnectors": {
-                "145579685": {
-                    "id": 145579685,
-                    "sourceID": 145459455,
-                    "targetID": 145579689
-                }
-            },
-            "trueConnectors": {},
-            "falseConnectors": {},
-            "iterationConnectors": {},
-            "noteConnectors": {},
-            "canUndo": true,
-            "undoCommand": "Set Parameter",
-            "undoCreated": 1764348671834,
-            "canRedo": false,
-            "redoCommand": "",
-            "redoCreated": -1,
-            "notes": {},
             "variables": {},
             "grids": {}
         },
